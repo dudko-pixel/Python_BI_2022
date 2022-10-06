@@ -1,0 +1,66 @@
+dna2rna = {"complement":
+    {'A': 'T',
+    'T': 'A',
+    'C': 'G',
+    'G': 'C'},
+    "transcribe":
+    {'A': 'A',
+    'T': 'U',
+    'C': 'C',
+    'G': 'G'}}
+nucleots = ['A','G','C','T']
+# defining needed functions
+def transcribe(sequence):
+    print(sequence.replace("T", "U")) 
+def reverse(sequence):
+    print(sequence[::-1]) 
+def complement(sequence):
+    seqch = ''
+    for nucl in sequence:
+            nucl = dna2rna["complement"][nucl]
+            seqch += nucl
+    print(seqch)
+def reverse_complement(sequence):
+    sequence = sequence[::-1]
+    seqch = ''
+    for nucl in sequence:
+            nucl = dna2rna["complement"][nucl]
+            seqch += nucl
+    print(seqch)
+fun_lst = ["transcribe", "reverse", "complement", "reverse complement"]
+
+# start of actions
+command = ''
+while 5 == 5:
+    command = input()
+    if command == "exit":
+        break
+    elif command in fun_lst:
+        sequence = input()
+        for nucl in sequence:
+            if nucl not in nucleots:
+                print("Wrong alphabet. Try a real DNA seq, please")
+                sequence = input()
+                continue
+            else:
+                pass
+        if 'U' in sequence:
+            if 'T' in sequence:
+                print("Impossible combination. Try a real DNA seq, please")
+                sequence = input()
+                continue
+        else:
+            if command == "transcribe":
+                transcribe(sequence)
+                continue
+            elif command == "reverse":
+                reverse(sequence)
+                continue
+            elif command == "complement":
+                complement(sequence)
+                continue
+            elif command == "reverse complement":
+                reverse_complement(sequence)
+                continue
+    else:
+        print("Try again! No such function!")
