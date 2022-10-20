@@ -1,0 +1,11 @@
+google
+beautifulsoup4
+biopython
+aiohttp
+pandas
+pandas
+opencv-python
+lxml
+math
+typing
+requests
