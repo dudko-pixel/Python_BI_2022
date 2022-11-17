@@ -1,11 +1,6 @@
-google
-beautifulsoup4
-biopython
-aiohttp
 pandas
-pandas
-opencv-python
-lxml
+numpy
+matplotlib
+seaborn
+matplotlib
 math
-typing
-requests
