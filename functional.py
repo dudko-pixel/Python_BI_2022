@@ -64,7 +64,7 @@ def func_chain(*args):
         funcs.pop(0)
     return funcs[0]
 
-## 4. sequential_map_chain
+## 5. sequential_map_chain
 ### This functions does the same as the sequential_map function but it uses the func_chain function to unite all given functions consequently
 ### It returns a list of values from initial container modified by consequent use of functions from input
 
