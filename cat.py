@@ -5,7 +5,7 @@ import sys
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('input_file', nargs='*', default=sys.stdin)
+parser.add_argument('input_file', nargs='?', default=sys.stdin)
 args = parser.parse_args()
 
 file_in = args.input_file
